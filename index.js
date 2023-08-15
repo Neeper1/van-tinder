@@ -37,6 +37,7 @@ function action(status) {
 
 
 function endSwiping() {
+    if (vanData.length == 0) {
     setTimeout(()=>{
         document.body.innerHTML = `
         <div class="end-swiping">
@@ -46,6 +47,7 @@ function endSwiping() {
         </div>
         `
     }, 1500)
+    }
 }
 
 
@@ -60,3 +62,4 @@ function render() {
 }
 
 render()
+endSwiping()
